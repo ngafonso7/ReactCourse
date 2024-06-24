@@ -1,13 +1,13 @@
-
 const TabButton = (props) => {
+  const { children, onSelect, isSelected = false } = props;
 
-    const { children, onSelect } = props;
-
-    return (
-        <li>
-            <button onClick={onSelect}>{children}</button>
-        </li>
-    );
+  return (
+    <li>
+      <button className={isSelected ? "active" : undefined} onClick={onSelect}>
+        {children}
+      </button>
+    </li>
+  );
 };
 
 export default TabButton;
