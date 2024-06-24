@@ -1,9 +1,9 @@
 const TabButton = (props) => {
-  const { children, onSelect, isSelected = false } = props;
+  const { children, isSelected = false, ...propss } = props;
 
   return (
     <li>
-      <button className={isSelected ? "active" : undefined} onClick={onSelect}>
+      <button className={isSelected ? "active" : undefined} {...propss}>
         {children}
       </button>
     </li>
