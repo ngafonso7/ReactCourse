@@ -24,7 +24,7 @@ function App() {
     setUserInput((prevUserInput) => {
       const newUserInput = {
         ...prevUserInput,
-        [inputType]: newValue,
+        [inputType]: +newValue,
       };
 
       return newUserInput;
