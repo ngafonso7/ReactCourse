@@ -1,10 +1,4 @@
-import { useState } from "react";
-
-
-
 const GameBoard = ({ onSelectSquare, board }) => {
-  
-
   //   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
   //   function handleSelectSquare(rowIndex, colIndex) {
