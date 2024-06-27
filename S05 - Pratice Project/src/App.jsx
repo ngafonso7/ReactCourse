@@ -20,6 +20,8 @@ function App() {
     duration: 10,
   });
 
+  const inputIsValid = userInput.duration > 0 && userInput.initialInvestment > 0 && userInput.expectedReturn > 0;
+
   const handleUserInput = (inputType, newValue) => {
     setUserInput((prevUserInput) => {
       const newUserInput = {
@@ -35,7 +37,12 @@ function App() {
     <main>
       <Header/>
       <UserInput inputValues={userInput} onChange={handleUserInput}/>
-      <Results input={userInput}/>
+      {inputIsValid && (<Results input={userInput}/>)}
+      {!inputIsValid && (
+        <p className="center">
+          Please enter values greater than zero
+        </p>
+      )}
     </main>
   )
 }
