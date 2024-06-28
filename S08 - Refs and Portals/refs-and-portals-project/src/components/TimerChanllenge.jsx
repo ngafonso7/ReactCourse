@@ -13,7 +13,7 @@ const TimerChallenge = ({ title, targetTime }) => {
         //Set timeout based on targetTime and set the timerStarted state to true
         timerRef.current = setTimeout(() => {
             setTimerExpired(true);
-            dialog.current.showModal();
+            dialog.current.open();
         }, targetTime * 1000);
 
         setTimerStarted(true);
